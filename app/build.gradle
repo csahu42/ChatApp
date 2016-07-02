@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+// For Dagger, EventBus
+apply plugin: 'com.neenbedankt.android-apt'
+// For RetroLambda *** Must be the last one ***
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion "23.0.3"
+  defaultConfig {
+    applicationId "com.example.chhattlal.chatapp"
+    minSdkVersion 15
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+    debug {
+      applicationIdSuffix ".debug"
+    }
+  }
+  compileOptions {
+    targetCompatibility 1.8
+    sourceCompatibility 1.8
+  }
+}
+
+dependencies {
+  def supportLibraryVersion = "23.4.0"
+  def firebaseVersion = "9.0.2"
+  def daggerVersion = "2.5"
+  def eventBusVersion = "3.0.0"
+  def jobManagerVersion = "2.0.0-alpha3"
+  def okHttpVersion = "3.3.1"
+  def retrofitVersion = "2.1.0"
+  def picassoVersion = "2.5.2"
+
+  apt "com.google.guava:guava:19.0"
+  apt "com.google.dagger:dagger-compiler:${daggerVersion}"
+  apt "org.greenrobot:eventbus-annotation-processor:${eventBusVersion}"
+
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile "com.android.support:appcompat-v7:${supportLibraryVersion}"
+  compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha3'
+  testCompile 'junit:junit:4.12'
+  androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+  androidTestCompile 'com.android.support.test:runner:0.5'
+  androidTestCompile "com.android.support:support-annotations:${supportLibraryVersion}"
+
+  compile "com.google.dagger:dagger:${daggerVersion}"
+  compile "org.greenrobot:eventbus:${eventBusVersion}"
+  compile "com.birbit:android-priority-jobqueue:${jobManagerVersion}"
+
+  compile "com.squareup.okhttp3:okhttp:${okHttpVersion}"
+  compile "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+  compile "com.squareup.retrofit2:converter-moshi:${retrofitVersion}"
+  compile "com.squareup.picasso:picasso:${picassoVersion}"
+  compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2'
+  compile 'com.jakewharton.byteunits:byteunits:0.9.1'
+  compile 'javax.annotation:jsr250-api:1.0'
+
+ /* apt {
+    arguments {
+      eventBusIndex "com.example.chhattlal.chatapp.MyEventBusIndex"
+    }
+  }*/
+}

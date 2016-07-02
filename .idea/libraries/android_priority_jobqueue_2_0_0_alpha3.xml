@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="android-priority-jobqueue-2.0.0-alpha3">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.birbit/android-priority-jobqueue/2.0.0-alpha3/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.birbit/android-priority-jobqueue/2.0.0-alpha3/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.birbit/android-priority-jobqueue/2.0.0-alpha3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.birbit/android-priority-jobqueue/2.0.0-alpha3/20a4668ddf5e46be26013f4094a41a2d7bdd4b73/android-priority-jobqueue-2.0.0-alpha3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
