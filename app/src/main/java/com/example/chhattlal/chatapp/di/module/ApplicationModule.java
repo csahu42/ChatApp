@@ -13,6 +13,7 @@ import dagger.Provides;
 import javax.inject.Named;
 import javax.inject.Singleton;
 import okhttp3.OkHttpClient;
+import org.greenrobot.eventbus.EventBus;
 
 @Module public class ApplicationModule {
 
@@ -30,12 +31,9 @@ import okhttp3.OkHttpClient;
     return chatApp;
   }
 
- /* @Provides @Singleton EventBus provideEventBus() {
-    return EventBus.builder().addIndex(new MyEventBusIndex())
-        .logNoSubscriberMessages(false)
-        .sendNoSubscriberEvent(false)
-        .build();
-  }*/
+  @Provides @Singleton EventBus provideEventBus() {
+    return EventBus.builder().logNoSubscriberMessages(false).sendNoSubscriberEvent(false).build();
+  }
 
   @Provides @Singleton JobManager provideJobManager() {
     Configuration.Builder builder =
@@ -47,19 +45,6 @@ import okhttp3.OkHttpClient;
             .injector(job -> {
               if (job instanceof BaseJob) ((BaseJob) job).inject(chatApp.getAppComponent());
             });
-
-    /*
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      builder.scheduler(FrameworkJobSchedulerService.createSchedulerFor(this, MyJobService.class),
-          false);
-    } else {
-      int enableGcm = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
-      if (enableGcm == ConnectionResult.SUCCESS) {
-        builder.scheduler(GcmJobSchedulerService.createSchedulerFor(this, MyGcmJobService.class),
-            false);
-      }
-    }
-    */
 
     return new JobManager(builder.build());
   }

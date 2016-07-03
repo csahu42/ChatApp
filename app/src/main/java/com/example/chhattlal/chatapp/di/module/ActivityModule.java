@@ -7,9 +7,7 @@ import dagger.Module;
 import dagger.Provides;
 import javax.inject.Named;
 
-/**
- * Created by Chhattlal on 21-06-2016.
- */
+
 @Module public class ActivityModule {
 
   private final Activity activity;

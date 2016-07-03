@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">ChatApp</string>
+  <string name="app_name">ChatApp</string>
+
+  <string name="gcm_send_message">Token retrieved and sent to server! You can now use gcmsender to
+    send downstream messages to this app.
+  </string>
+  <string name="registering_message">Generating InstanceID token...</string>
+  <string name="token_error_message">An error occurred while either fetching the InstanceID token,
+    sending the fetched token to the server or subscribing to the PubSub topic. Please try
+    running the sample again.
+  </string>
+  <string name="gcm_defaultSenderId"/>
+  <string name="type_message">type message</string>
+  <string name="send">SEND</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="exitMessage">Press BACK to exit from App.</string>
+  <string name="ok">OK</string>
+
+  <string-array name="permissionRationale">
+    <item>ChatApp needs internet to connect with server</item>
+    <item>ChatApp needs to check if there is any active internet connection available to optimize battery usage</item>
+    <item>ChatApp will account something</item>
+    <item>ChatApp will tell you which of your contacts is using the ChatApp so you can connect with them</item>
+    <item>Phone</item>
+    <item>Call Log</item>
+    <item>ChatApp will automatically verify your mobile rank by reading the One Time Password</item>
+    <item>ChatApp will store the video you shoot in the gallery</item>
+    <item>Audio</item>
+    <item>Camera</item>
+    <item>Location</item>
+    <item>Wake</item>
+    <item>Vibrate</item>
+  </string-array>
 </resources>

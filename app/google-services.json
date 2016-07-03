@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "447587318228",
+    "project_id": "chatapp-e1a38"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447587318228:android:b568fbab90f65cc8",
+        "android_client_info": {
+          "package_name": "com.example.chhattlal.chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjDJn3puE2eOOvMOWw-WiaDrmD-D8B3YE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

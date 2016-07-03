@@ -1,9 +1,5 @@
 package com.example.chhattlal.chatapp.job;
 
-/**
- * Created by Chhattlal on 21-06-2016.
- */
-
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import com.birbit.android.jobqueue.Job;

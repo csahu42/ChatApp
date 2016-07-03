@@ -7,9 +7,7 @@ import dagger.Component;
 import javax.inject.Singleton;
 import okhttp3.OkHttpClient;
 
-/**
- * Created by Chhattlal on 21-06-2016.
- */
+
 @Singleton @Component(modules = { ApplicationModule.class, NetworkModule.class })
 public interface ApplicationComponent {
 
